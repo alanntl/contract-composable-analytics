@@ -1,6 +1,6 @@
 # Kaggle Competition Datasets
 
-This document lists all Kaggle competitions used in the Contract-Composable Analytics contract-composable analytics evaluation.
+This document lists all Kaggle competitions with pre-built microservices in this framework.
 To download a dataset, use the [Kaggle CLI](https://github.com/Kaggle/kaggle-api):
 
 ```bash
