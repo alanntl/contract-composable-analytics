@@ -26,7 +26,7 @@ import pandas as pd
 from typing import Dict, List, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 from services.io_utils import load_data as _load_data, save_data as _save_data
 
 

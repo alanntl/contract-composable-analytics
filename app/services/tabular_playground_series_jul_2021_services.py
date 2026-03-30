@@ -1,5 +1,5 @@
 """
-Tabular Playground Series July 2021 - SLEGO Services (v2.0)
+Tabular Playground Series July 2021 - Contract-Composable Analytics Services (v2.0)
 =============================================================
 Competition: https://www.kaggle.com/competitions/tabular-playground-series-jul-2021
 Problem Type: Multi-target Regression (Air Quality Time Series)
@@ -41,7 +41,7 @@ from typing import Dict, Optional, List, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from slego_contract import contract
+from contract import contract
 from services.io_utils import load_data as _load_data, save_data as _save_data
 
 

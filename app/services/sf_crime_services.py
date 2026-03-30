@@ -1,5 +1,5 @@
 """
-SLEGO Services for sf-crime competition
+Contract-Composable Analytics Services for sf-crime competition
 ========================================
 
 Competition: https://www.kaggle.com/c/sf-crime
@@ -24,7 +24,7 @@ import pandas as pd
 from typing import Dict, List, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 from services.io_utils import load_data as _load_data, save_data as _save_data
 
 # Import reusable services from common modules

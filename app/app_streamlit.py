@@ -1,5 +1,5 @@
 """
-SLEGO Pipeline Workbench
+Pipeline Workbench
 =====================
 Redesigned layout matching the 'Blue Enterprise' screenshot.
 Features: 5-Tab Navigation, 3-Column Studio, Custom Header.
@@ -18,7 +18,7 @@ import streamlit as st
 import pandas as pd
 import streamlit.components.v1 as components
 
-from slego_contract import ServiceRegistry
+from contract import ServiceRegistry
 from pipeline_runner import PipelineRunner
 import recommender
 # from snake_page import render_snake_game  # Easter egg, removed for publication
@@ -38,7 +38,7 @@ DATASETS_DIR = os.path.join(WEBAPP_DIR, "datasets")
 ARTIFACTS_DIR = os.path.join(WEBAPP_DIR, "artifacts")
 STORAGE_DIR = os.path.join(WEBAPP_DIR, "storage")
 PIPELINE_SAVE_DIR = os.path.join(STORAGE_DIR, "pipelines")
-KB_PATH = os.path.join(WEBAPP_DIR, "slego_kb.sqlite")
+KB_PATH = os.path.join(WEBAPP_DIR, "kb.sqlite")
 
 os.makedirs(DATASETS_DIR, exist_ok=True)
 os.makedirs(ARTIFACTS_DIR, exist_ok=True)
@@ -46,7 +46,7 @@ os.makedirs(STORAGE_DIR, exist_ok=True)
 os.makedirs(PIPELINE_SAVE_DIR, exist_ok=True)
 
 st.set_page_config(
-    page_title="SLEGO - Software Lego",
+    page_title="Contract-Composable Analytics",
     page_icon="🧱",
     layout="wide",
 )
@@ -183,7 +183,7 @@ st.markdown("""
 # STATE & HELPERS
 # =============================================================================
 
-st.title("SLEGO - Software Lego: A Collaborative and Modular Architecture for Data Analytics")
+st.title("Contract-Composable Analytics: A Collaborative and Modular Architecture for Data Analytics")
 
 def init_session_state():
     if 'pipeline_steps' not in st.session_state:
@@ -2439,10 +2439,10 @@ def render_graph_visualizer():
     
     # Load saved pipelines from Knowledge Base
     try:
-        from slego_kb import SlegoKnowledgeBase
-        kb_path = os.path.join(os.path.dirname(__file__), "slego_kb.sqlite")
+        from kb import KnowledgeBase
+        kb_path = os.path.join(os.path.dirname(__file__), "kb.sqlite")
         if os.path.exists(kb_path):
-            kb = SlegoKnowledgeBase(kb_path)
+            kb = KnowledgeBase(kb_path)
             pipelines_list = kb.list_pipelines()
             for p in pipelines_list:
                 name = p.get("name", "Unnamed")
@@ -2957,7 +2957,7 @@ def main():
 
     # Sidebar Navigation
     with st.sidebar:
-        st.title("🧱 SLEGO")
+        st.title("🧱 Contract-Composable Analytics")
         nav_mode = st.radio(
             "Navigation", 
             [
@@ -3050,7 +3050,7 @@ def main():
         st.header("Introduction")
         st.markdown(
             """
-            **SLEGO** (Service-LEGO) is a modular architecture for data analytics.
+            **Contract-Composable Analytics** (Service-LEGO) is a modular architecture for data analytics.
             It solves the "3 Tribes" problem by separating concerns:
             - **Tech Experts** build reusable microservices.
             - **Domain Experts** compose pipelines using these blocks.

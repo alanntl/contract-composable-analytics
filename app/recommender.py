@@ -1,5 +1,5 @@
 """
-SLEGO Pipeline Composition Recommender
+Contract-Composable Analytics Pipeline Composition Recommender
 ======================================
 
 A LangGraph-based system that:
@@ -48,7 +48,7 @@ logger = logging.getLogger(__name__)
 @dataclass
 class ComposerConfig:
     """Configuration for the Pipeline Composer."""
-    db_path: str = "slego_kb.sqlite"
+    db_path: str = "kb.sqlite"
     embed_model: str = "text-embedding-3-small"
     embed_dim: int = 1536
     llm_model: str = "gpt-5-mini"
@@ -677,7 +677,7 @@ class RecommenderConfig:
     """Configuration for the Streamlit-facing multi-index pipeline recommender."""
 
     # NOTE: Tests expect this default literal value.
-    db_path: str = "slego_kb.sqlite"
+    db_path: str = "kb.sqlite"
 
     # Retrieval sizes
     initial_k: int = 20
@@ -938,8 +938,8 @@ class MultiIndexRecommender:
         candidate = os.path.join(here, db_path)
         if os.path.exists(candidate):
             return candidate
-        # 3) explicit fallback: app/slego_kb.sqlite
-        fallback = os.path.join(here, "slego_kb.sqlite")
+        # 3) explicit fallback: app/kb.sqlite
+        fallback = os.path.join(here, "kb.sqlite")
         if os.path.exists(fallback):
             return fallback
         raise FileNotFoundError(f"Knowledge Base not found at '{db_path}'.")

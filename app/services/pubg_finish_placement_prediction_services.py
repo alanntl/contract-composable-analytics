@@ -1,5 +1,5 @@
 """
-PUBG Finish Placement Prediction - SLEGO Services
+PUBG Finish Placement Prediction - Contract-Composable Analytics Services
 ===================================================
 Competition: https://www.kaggle.com/competitions/pubg-finish-placement-prediction
 Problem Type: Regression
@@ -37,10 +37,10 @@ except ImportError:
     from regression_services import train_lightgbm_regressor, predict_regressor
 
 try:
-    from slego_contract import contract
+    from contract import contract
 except ImportError:
     try:
-        from app.slego_contract import contract
+        from app.contract import contract
     except ImportError:
         def contract(**kwargs):
             def decorator(func):

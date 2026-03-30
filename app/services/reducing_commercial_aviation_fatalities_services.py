@@ -1,5 +1,5 @@
 """
-Reducing Commercial Aviation Fatalities - SLEGO Services
+Reducing Commercial Aviation Fatalities - Contract-Composable Analytics Services
 =========================================================
 Competition: https://www.kaggle.com/competitions/reducing-commercial-aviation-fatalities
 Problem Type: Multiclass Classification (4 classes)
@@ -27,7 +27,7 @@ import pandas as pd
 from typing import Dict, List, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 
 # ---------------------------------------------------------------------------

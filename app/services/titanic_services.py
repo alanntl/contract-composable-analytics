@@ -1,5 +1,5 @@
 """
-Titanic: Machine Learning from Disaster - SLEGO Services
+Titanic: Machine Learning from Disaster - Contract-Composable Analytics Services
 =========================================================
 Competition: https://www.kaggle.com/competitions/titanic
 Problem Type: Binary Classification
@@ -24,7 +24,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # Import from common modules
 try:

@@ -1,5 +1,5 @@
 """
-Conway's Reverse Game of Life 2020 - SLEGO Services
+Conway's Reverse Game of Life 2020 - Contract-Composable Analytics Services
 ====================================================
 Competition: https://www.kaggle.com/competitions/conways-reverse-game-of-life-2020
 Problem Type: Combinatorial Optimization (Reverse Cellular Automaton)
@@ -30,7 +30,7 @@ from typing import Dict, List, Optional, Any
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # IMPORTS FROM COMMON MODULES
@@ -244,7 +244,7 @@ def _solve_batch(args):
 
 
 # =============================================================================
-# SLEGO SERVICES
+# Contract-Composable Analytics SERVICES
 # =============================================================================
 
 @contract(

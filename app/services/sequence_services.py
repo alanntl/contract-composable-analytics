@@ -1,5 +1,5 @@
 """
-SLEGO Services for integer-sequence-learning competition
+Contract-Composable Analytics Services for integer-sequence-learning competition
 =========================================================
 Regression - Target: Last (predict next integer in OEIS sequence)
 Knowledge-based integer sequence prediction challenge
@@ -20,7 +20,7 @@ from typing import Dict, Optional, List
 # Import contract decorator and shared utilities
 import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # HELPERS: Import from shared io_utils

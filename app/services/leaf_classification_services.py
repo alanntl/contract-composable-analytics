@@ -1,5 +1,5 @@
 """
-Leaf Classification - SLEGO Services
+Leaf Classification - Contract-Composable Analytics Services
 =====================================
 Competition: https://www.kaggle.com/competitions/leaf-classification
 Problem Type: Multiclass Classification (99 species)
@@ -32,7 +32,7 @@ import pandas as pd
 from typing import Dict, List, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # Import reusable services from common modules
 from services.preprocessing_services import (

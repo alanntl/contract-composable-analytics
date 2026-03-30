@@ -1,5 +1,5 @@
 """
-Forest Cover Type Prediction - SLEGO Services
+Forest Cover Type Prediction - Contract-Composable Analytics Services
 ==============================================
 Competition: https://www.kaggle.com/competitions/forest-cover-type-prediction
 Problem Type: Multiclass Classification (7 forest cover types)
@@ -29,7 +29,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # IMPORTS FROM COMMON MODULES (G1: Reuse existing services)

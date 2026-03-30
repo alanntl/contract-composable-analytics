@@ -1,5 +1,5 @@
 """
-Ciphertext Challenge II - SLEGO Services
+Ciphertext Challenge II - Contract-Composable Analytics Services
 ==========================================
 Competition: https://www.kaggle.com/competitions/ciphertext-challenge-ii
 Problem Type: Text Matching (Cipher Decryption)
@@ -30,7 +30,7 @@ from typing import Dict, List, Optional, Any
 from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 
 # =============================================================================

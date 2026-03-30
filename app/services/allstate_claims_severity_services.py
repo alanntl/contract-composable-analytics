@@ -1,5 +1,5 @@
 """
-Allstate Claims Severity - SLEGO Services
+Allstate Claims Severity - Contract-Composable Analytics Services
 ==========================================
 
 Competition: https://www.kaggle.com/competitions/allstate-claims-severity
@@ -26,7 +26,7 @@ from typing import Dict, List, Optional
 import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # I/O UTILS

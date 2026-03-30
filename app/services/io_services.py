@@ -1,7 +1,7 @@
 """
-SLEGO I/O Services - Consolidated Data Loading and Saving
+Contract-Composable Analytics I/O Services - Consolidated Data Loading and Saving
 ==========================================================
-This module provides unified I/O operations for all SLEGO pipelines.
+This module provides unified I/O operations for all Contract-Composable Analytics pipelines.
 All data loading and saving should be imported from this module.
 
 Usage:
@@ -16,7 +16,7 @@ from functools import wraps
 
 
 def contract(inputs=None, outputs=None, params=None, description=None, tags=None, version="1.0.0"):
-    """Service contract decorator for SLEGO services."""
+    """Service contract decorator for Contract-Composable Analytics services."""
     def decorator(func):
         func._contract = {
             'inputs': inputs or {},
@@ -155,7 +155,7 @@ def save_artifact(obj: Any, path: str) -> None:
 
 
 # =============================================================================
-# SLEGO Service Wrappers (for pipeline integration)
+# Contract-Composable Analytics Service Wrappers (for pipeline integration)
 # =============================================================================
 
 @contract(
@@ -330,7 +330,7 @@ def create_submission(
 
 
 # =============================================================================
-# SLEGO-Compatible Services (using inputs/outputs dict pattern)
+# Contract-Composable Analytics-Compatible Services (using inputs/outputs dict pattern)
 # =============================================================================
 
 @contract(
@@ -340,7 +340,7 @@ def create_submission(
     outputs={
         "submission": {"format": "csv", "schema": {"type": "tabular"}},
     },
-    description="Create Kaggle submission file from predictions (SLEGO interface)",
+    description="Create Kaggle submission file from predictions (Contract-Composable Analytics interface)",
     tags=["io", "submission", "kaggle", "generic"],
     version="1.0.0",
 )
@@ -353,7 +353,7 @@ def format_submission(
     source_id_column: str = 'id',
 ) -> str:
     """
-    Create a Kaggle-format submission file using SLEGO interface.
+    Create a Kaggle-format submission file using Contract-Composable Analytics interface.
 
     Takes predictions CSV with cluster/prediction column and formats
     it for Kaggle submission with proper column names.

@@ -1,12 +1,12 @@
 """
-Bike Sharing Demand - SLEGO Services (Generalized)
+Bike Sharing Demand - Contract-Composable Analytics Services (Generalized)
 ==================================================
 
 Competition: https://www.kaggle.com/competitions/bike-sharing-demand
 Problem Type: Regression
 Target: count (hourly bike rental count)
 
-Refactored to leverage generic SLEGO services for modeling and preprocessing.
+Refactored to leverage generic Contract-Composable Analytics services for modeling and preprocessing.
 Follows G1-G6 principles:
 - G1: Generic services (extract_datetime_features, impute_zeros_with_regressor)
 - G2: Single responsibility (specific bike features separated from generic ones)
@@ -28,7 +28,7 @@ from typing import Dict, List, Any, Optional
 
 # Setup path for internal imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # Import generic services for reuse
 try:
@@ -284,12 +284,12 @@ PIPELINE_SPEC = [
 ]
 
 def register_to_kb():
-    """Register all services in this module to the Slego KB database."""
+    """Register all services in this module to the KB database."""
     import sqlite3
     import hashlib
     import inspect
 
-    db_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "slego_kb.sqlite")
+    db_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "kb.sqlite")
     if not os.path.exists(db_path):
         return f"Database not found at {db_path}"
 

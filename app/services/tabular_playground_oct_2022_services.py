@@ -1,5 +1,5 @@
 """
-Tabular Playground Series Oct 2022 - SLEGO Services
+Tabular Playground Series Oct 2022 - Contract-Composable Analytics Services
 =====================================================
 Competition: https://www.kaggle.com/competitions/tabular-playground-series-oct-2022
 Problem Type: Multi-label binary classification (two independent probabilities)
@@ -33,7 +33,7 @@ Solution Notebook Insights (from top 3 solutions):
    - Data augmentation: mirror, flip_x, player shuffling
    - Multiple model restarts and Test-Time Augmentation
 
-SLEGO approach: Multi-target LightGBM classifier with feature engineering
+Contract-Composable Analytics approach: Multi-target LightGBM classifier with feature engineering
 """
 
 import os
@@ -45,7 +45,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # IMPORTS FROM COMMON MODULES (G1: Reuse existing services)

@@ -1,5 +1,5 @@
 """
-Store Sales Time Series Forecasting - SLEGO Services
+Store Sales Time Series Forecasting - Contract-Composable Analytics Services
 =====================================================
 Competition: https://www.kaggle.com/competitions/store-sales-time-series-forecasting
 Problem Type: Regression (time-series)
@@ -23,7 +23,7 @@ Key insights from top-3 solution notebooks:
    (store_nbr, family), rolling statistics, oil price as external regressor,
    payday indicator (wages paid 15th and last day of month).
 
-For SLEGO pipeline: flat-table LightGBM approach with rich feature engineering
+For Contract-Composable Analytics pipeline: flat-table LightGBM approach with rich feature engineering
 from all external datasets.
 """
 
@@ -35,7 +35,7 @@ from typing import Dict, List, Optional
 
 # Add parent directory for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 
 # ---------------------------------------------------------------------------

@@ -1,5 +1,5 @@
 """
-SLEGO Services Package
+Services Package
 ======================
 
 Common service modules (reusable across competitions):

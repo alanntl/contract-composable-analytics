@@ -1,6 +1,6 @@
 # Kaggle Competition Datasets
 
-This document lists all Kaggle competitions used in the SLEGO contract-composable analytics evaluation.
+This document lists all Kaggle competitions used in the Contract-Composable Analytics contract-composable analytics evaluation.
 To download a dataset, use the [Kaggle CLI](https://github.com/Kaggle/kaggle-api):
 
 ```bash

@@ -1,5 +1,5 @@
 """
-SIIM-ISIC Melanoma Classification - SLEGO Services
+SIIM-ISIC Melanoma Classification - Contract-Composable Analytics Services
 ====================================================
 Competition: https://www.kaggle.com/competitions/siim-isic-melanoma-classification
 Problem Type: Binary Classification (image-based, metadata fallback)
@@ -31,7 +31,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 try:
     from services.classification_services import (
@@ -431,7 +431,7 @@ def run_pipeline():
     from pipeline_runner import PipelineRunner
 
     runner = PipelineRunner(
-        "slego_kb.sqlite",
+        "kb.sqlite",
         modules=[
             "siim_isic_melanoma_classification_services",
             "classification_services",

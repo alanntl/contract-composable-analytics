@@ -1,5 +1,5 @@
 """
-SLEGO Training Services - Unified Model Training Interface
+Contract-Composable Analytics Training Services - Unified Model Training Interface
 ==========================================================
 This module provides a unified interface for training ML models.
 Instead of separate train_lightgbm, train_xgboost, etc., use train_model().
@@ -18,7 +18,7 @@ from functools import wraps
 
 # Add parent directory for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 
 def _save_artifact(obj: Any, path: str) -> None:

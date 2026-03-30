@@ -31,10 +31,10 @@ except ImportError:
 import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 try:
-    from slego_contract import contract
+    from contract import contract
 except ImportError:
     try:
-        from app.slego_contract import contract
+        from app.contract import contract
     except ImportError:
         # Fallback: no-op decorator if contract system unavailable
         def contract(**kwargs):

@@ -1,5 +1,5 @@
 """
-House Prices Advanced Regression Techniques - SLEGO Services
+House Prices Advanced Regression Techniques - Contract-Composable Analytics Services
 ==============================================================
 
 Competition: https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques

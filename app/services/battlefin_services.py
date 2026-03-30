@@ -1,5 +1,5 @@
 """
-BattleFin Big Data Combine Forecasting Challenge - SLEGO Services
+BattleFin Big Data Combine Forecasting Challenge - Contract-Composable Analytics Services
 ==================================================================
 Competition: https://www.kaggle.com/competitions/battlefin-s-big-data-combine-forecasting-challenge
 Problem Type: Multi-Output Regression (Time-Series Forecasting)
@@ -46,7 +46,7 @@ from services.io_services import load_data, save_data
 
 
 def contract(inputs=None, outputs=None, params=None, description=None, tags=None, version="1.0.0"):
-    """Service contract decorator for SLEGO services."""
+    """Service contract decorator for Contract-Composable Analytics services."""
     def decorator(func):
         func._contract = {
             'inputs': inputs or {},

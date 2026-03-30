@@ -1,5 +1,5 @@
 """
-Tradeshift Text Classification - SLEGO Services
+Tradeshift Text Classification - Contract-Composable Analytics Services
 =================================================
 Competition: https://www.kaggle.com/competitions/tradeshift-text-classification
 Problem Type: Multi-label Binary Classification (33 targets)
@@ -24,7 +24,7 @@ import pandas as pd
 from typing import Dict, List, Any, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 
 @contract(

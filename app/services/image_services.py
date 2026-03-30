@@ -1,5 +1,5 @@
 """
-Image Services - SLEGO Common Module
+Image Services - Common Module
 ======================================
 
 Image processing and classification services for image competitions.
@@ -21,7 +21,7 @@ import pandas as pd
 from typing import Dict, List, Any, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 
 # =============================================================================

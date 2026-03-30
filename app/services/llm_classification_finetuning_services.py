@@ -1,5 +1,5 @@
 """
-LLM Classification Finetuning - SLEGO Services
+LLM Classification Finetuning - Contract-Composable Analytics Services
 ================================================
 Competition: https://www.kaggle.com/competitions/llm-classification-finetuning
 Problem Type: Multiclass classification (3 classes)
@@ -7,7 +7,7 @@ Target: winner_model_a, winner_model_b, winner_tie (one-hot -> single target)
 
 This competition compares responses from two LLMs to a given prompt and predicts
 which model's response is preferred. Top solutions use fine-tuned LLMs (Gemma2-9b,
-Llama3-8b) with ensemble inference. This SLEGO pipeline uses text feature engineering
+Llama3-8b) with ensemble inference. This Contract-Composable Analytics pipeline uses text feature engineering
 + TF-IDF + LightGBM as a local baseline approach.
 
 Competition-specific services:
@@ -33,7 +33,7 @@ import pandas as pd
 from typing import Dict, List, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # HELPERS: Import from shared io_utils

@@ -1,5 +1,5 @@
 """
-Recruit Restaurant Visitor Forecasting - SLEGO Services
+Recruit Restaurant Visitor Forecasting - Contract-Composable Analytics Services
 ========================================================
 Competition: https://www.kaggle.com/competitions/recruit-restaurant-visitor-forecasting
 Problem Type: Regression (Time-series forecasting)
@@ -28,7 +28,7 @@ from sklearn.preprocessing import LabelEncoder
 
 
 def contract(inputs=None, outputs=None, params=None, description=None, tags=None, version="1.0.0"):
-    """Service contract decorator for SLEGO services."""
+    """Service contract decorator for Contract-Composable Analytics services."""
     def decorator(func):
         func._contract = {
             'inputs': inputs or {},

@@ -1,5 +1,5 @@
 """
-Tabular Playground Series September 2022 - SLEGO Services
+Tabular Playground Series September 2022 - Contract-Composable Analytics Services
 ==========================================================
 
 Competition: https://www.kaggle.com/competitions/tabular-playground-series-sep-2022
@@ -31,7 +31,7 @@ from typing import Dict, List, Any, Optional
 from datetime import datetime
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 from services.io_utils import load_data as _load_data, save_data as _save_data
 
@@ -816,12 +816,12 @@ SERVICE_REGISTRY = {
 
 
 def register_to_kb():
-    """Register all services in this module to the Slego KB database."""
+    """Register all services in this module to the KB database."""
     import sqlite3
     import hashlib
     import inspect
 
-    db_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "slego_kb.sqlite")
+    db_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "kb.sqlite")
     if not os.path.exists(db_path):
         return f"Database not found at {db_path}"
 

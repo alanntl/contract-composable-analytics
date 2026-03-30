@@ -1,5 +1,5 @@
 """
-Playground Series S3E19 - SLEGO Services (v2.0 - Improved)
+Playground Series S3E19 - Contract-Composable Analytics Services (v2.0 - Improved)
 ==========================================================
 Competition: https://www.kaggle.com/competitions/playground-series-s3e19
 Problem Type: Regression (Mini-Course Sales Prediction)
@@ -37,7 +37,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # IMPORTS FROM COMMON MODULES (G1: Reuse existing services)

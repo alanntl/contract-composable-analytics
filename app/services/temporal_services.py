@@ -1,5 +1,5 @@
 """
-SLEGO Temporal Services - DateTime and Time-Series Features
+Contract-Composable Analytics Temporal Services - DateTime and Time-Series Features
 ============================================================
 This module provides reusable services for temporal feature engineering.
 Use these for any competition with datetime or time-series data.
@@ -15,7 +15,7 @@ from functools import wraps
 
 
 def contract(inputs=None, outputs=None, params=None, description=None, tags=None, version="1.0.0"):
-    """Service contract decorator for SLEGO services."""
+    """Service contract decorator for Contract-Composable Analytics services."""
     def decorator(func):
         func._contract = {
             'inputs': inputs or {},

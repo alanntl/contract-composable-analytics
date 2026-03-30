@@ -1,5 +1,5 @@
 """
-Playground Series S3E5 - SLEGO Services
+Playground Series S3E5 - Contract-Composable Analytics Services
 ========================================
 Competition: https://www.kaggle.com/competitions/playground-series-s3e5
 Problem Type: Multiclass Classification (wine quality: 3-9)
@@ -38,7 +38,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # IMPORTS FROM COMMON MODULES (G1: Reuse existing services)

@@ -1,5 +1,5 @@
 """
-BigQuery Geotab Intersection Congestion - SLEGO Services
+BigQuery Geotab Intersection Congestion - Contract-Composable Analytics Services
 =========================================================
 Competition: https://www.kaggle.com/competitions/bigquery-geotab-intersection-congestion
 Problem Type: Multi-target Regression
@@ -30,7 +30,7 @@ from typing import Dict, Optional, List, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # HELPERS

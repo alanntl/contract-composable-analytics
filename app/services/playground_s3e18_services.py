@@ -1,5 +1,5 @@
 """
-Playground Series S3E18 - SLEGO Services
+Playground Series S3E18 - Contract-Composable Analytics Services
 =========================================
 Competition: https://www.kaggle.com/competitions/playground-series-s3e18
 Problem Type: Multi-label binary classification
@@ -32,7 +32,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # IMPORTS FROM COMMON MODULES (G1: Reuse existing services)

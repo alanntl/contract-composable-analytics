@@ -1,5 +1,5 @@
 """
-Plant Seedlings Classification - SLEGO Services
+Plant Seedlings Classification - Contract-Composable Analytics Services
 =================================================
 Competition: https://www.kaggle.com/competitions/plant-seedlings-classification
 Problem Type: Multiclass Classification (12 plant species from images)
@@ -29,7 +29,7 @@ import pandas as pd
 from typing import Dict, List, Any, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # Import reusable services from image_services
 from services.image_services import (

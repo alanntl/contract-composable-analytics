@@ -1,5 +1,5 @@
 """
-Tests for the SLEGO Data Contract System
+Tests for the Data Contract System
 =========================================
 
 Tests cover:
@@ -23,7 +23,7 @@ import pytest
 # Ensure the app directory is importable
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from slego_contract import (
+from contract import (
     TabularSchema,
     JSONSchema,
     ArtifactSchema,

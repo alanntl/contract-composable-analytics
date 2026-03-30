@@ -1,4 +1,4 @@
-# SLEGO Contract-Composable Analytics
+# Contract-Composable Analytics Contract-Composable Analytics
 # Core app dependencies
 
 # Web framework

@@ -1,5 +1,5 @@
 """
-Playground Series S4E5 - SLEGO Services
+Playground Series S4E5 - Contract-Composable Analytics Services
 ========================================
 Competition: https://www.kaggle.com/competitions/playground-series-s4e5
 Problem Type: Regression (continuous probability 0-1)
@@ -39,7 +39,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # IMPORTS FROM COMMON MODULES (G1: Reuse existing services)

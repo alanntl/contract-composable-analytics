@@ -1,5 +1,5 @@
 """
-Whale Categorization Playground - SLEGO Services
+Whale Categorization Playground - Contract-Composable Analytics Services
 =================================================
 Competition: https://www.kaggle.com/competitions/whale-categorization-playground
 Problem Type: Multiclass image classification
@@ -29,7 +29,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # HELPERS

@@ -1,5 +1,5 @@
 """
-Steel Plate Defect Prediction (Playground Series S4E3) - SLEGO Services
+Steel Plate Defect Prediction (Playground Series S4E3) - Contract-Composable Analytics Services
 =======================================================================
 Competition: https://www.kaggle.com/competitions/playground-series-s4e3
 Problem Type: Multi-label binary classification
@@ -26,7 +26,7 @@ import pandas as pd
 from typing import Dict, List, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 try:
     from services.io_utils import load_data as _load_data, save_data as _save_data

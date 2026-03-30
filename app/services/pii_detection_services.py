@@ -1,5 +1,5 @@
 """
-PII Detection and Removal from Educational Data - SLEGO Services
+PII Detection and Removal from Educational Data - Contract-Composable Analytics Services
 ================================================================
 Competition: https://www.kaggle.com/competitions/pii-detection-removal-from-educational-data
 Problem Type: Token-level NER (Named Entity Recognition)
@@ -34,7 +34,7 @@ import pandas as pd
 from typing import Dict, List, Any, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 from services.io_utils import load_data as _load_data, save_data as _save_data
 

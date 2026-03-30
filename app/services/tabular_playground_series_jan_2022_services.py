@@ -1,5 +1,5 @@
 """
-Tabular Playground Series Jan 2022 - SLEGO Services (v3.0)
+Tabular Playground Series Jan 2022 - Contract-Composable Analytics Services (v3.0)
 ==========================================================
 
 Competition: https://www.kaggle.com/competitions/tabular-playground-series-jan-2022
@@ -35,7 +35,7 @@ from typing import Dict, List, Any, Optional
 
 # Setup path for internal imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # Import shared I/O utilities
 from services.io_utils import load_data as _load_data, save_data as _save_data

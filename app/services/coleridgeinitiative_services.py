@@ -1,5 +1,5 @@
 """
-Coleridge Initiative: Show Us the Data - SLEGO Services
+Coleridge Initiative: Show Us the Data - Contract-Composable Analytics Services
 ========================================================
 Competition: https://www.kaggle.com/competitions/coleridgeinitiative-show-us-the-data
 Problem Type: NLP Text Extraction (dataset mention identification)
@@ -34,7 +34,7 @@ import pandas as pd
 from typing import Dict, List, Any, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 from services.io_utils import load_data as _load_data, save_data as _save_data
 

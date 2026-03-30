@@ -1,5 +1,5 @@
 """
-Regression Model Services - SLEGO Common Module
+Regression Model Services - Common Module
 =================================================
 
 Generic, reusable regression model training and prediction services.
@@ -20,7 +20,7 @@ Services:
     - predict_regressor: Generic prediction from any pickled regressor
     - predict_ensemble_regressor: Predict with ensemble model dict (models + weights)
 
-All services follow SLEGO design principles:
+All services follow Contract-Composable Analytics design principles:
 - G1: Each service does exactly ONE thing
 - G2: Explicit I/O contracts via @contract
 - G3: Pure functions with explicit random_state
@@ -42,7 +42,7 @@ from typing import Dict, Optional, List, Any
 # Add parent directory for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # HELPERS: Import from shared io_utils

@@ -1,5 +1,5 @@
 """
-Scrabble Player Rating - SLEGO Services (Enhanced v3.0.0)
+Scrabble Player Rating - Contract-Composable Analytics Services (Enhanced v3.0.0)
 =========================================================
 Competition: https://www.kaggle.com/competitions/scrabble-player-rating
 Problem Type: Regression
@@ -27,7 +27,7 @@ import pandas as pd
 from typing import Dict, List, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # ---------------------------------------------------------------------------
 # Helper: load / save

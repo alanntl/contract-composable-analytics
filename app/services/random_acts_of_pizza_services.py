@@ -1,5 +1,5 @@
 """
-Random Acts of Pizza - SLEGO Services
+Random Acts of Pizza - Contract-Composable Analytics Services
 ======================================
 Competition: https://www.kaggle.com/competitions/random-acts-of-pizza
 Problem Type: Binary Classification
@@ -34,10 +34,10 @@ from services.io_services import load_data as _load_data, save_data as _save_dat
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 try:
-    from slego_contract import contract
+    from contract import contract
 except ImportError:
     try:
-        from app.slego_contract import contract
+        from app.contract import contract
     except ImportError:
         def contract(**kwargs):
             def decorator(func):

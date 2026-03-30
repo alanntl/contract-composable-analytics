@@ -1,5 +1,5 @@
 """
-SLEGO Services for playground-series-s3e12 competition
+Contract-Composable Analytics Services for playground-series-s3e12 competition
 Binary Classification - Target: target
 Kidney Stone Prediction based on Urine Analysis
 
@@ -9,7 +9,7 @@ Domain-specific feature engineering inspired by top Kaggle solutions:
   - tetsutani (101 votes): calcium_to_urea_ratio, osmolality_to_sg_ratio
 
 Only domain-specific logic lives here; everything else
-is imported from the generic SLEGO Layers 1-5.
+is imported from the generic Contract-Composable Analytics Layers 1-5.
 """
 import os
 import sys
@@ -18,7 +18,7 @@ import pandas as pd
 from typing import Dict, List, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 from services.io_utils import load_data as _load_data, save_data as _save_data
 
 # Import reusable generic services (Layers 2-5)

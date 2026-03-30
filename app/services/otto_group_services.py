@@ -1,5 +1,5 @@
 """
-SLEGO Services for otto-group-product-classification-challenge
+Contract-Composable Analytics Services for otto-group-product-classification-challenge
 Multiclass Classification - Target: target (Class_1 to Class_9)
 Anonymous features challenge - 93 numeric count-like features
 
@@ -13,7 +13,7 @@ import pandas as pd
 import numpy as np
 from typing import Dict, List, Optional
 
-from slego_contract import contract
+from contract import contract
 
 
 def _load_data(path: str) -> pd.DataFrame:

@@ -1,5 +1,5 @@
 """
-Two Sigma Connect: Rental Listing Inquiries - SLEGO Services
+Two Sigma Connect: Rental Listing Inquiries - Contract-Composable Analytics Services
 ============================================================
 Competition: https://www.kaggle.com/c/two-sigma-connect-rental-listing-inquiries
 Problem Type: Multiclass classification (high, medium, low interest)
@@ -34,7 +34,7 @@ from typing import Dict, List, Optional
 from scipy import sparse
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 
 # =============================================================================

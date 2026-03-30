@@ -1,5 +1,5 @@
 """
-Playground Series S4E12 - Insurance Premium Prediction - SLEGO Services
+Playground Series S4E12 - Insurance Premium Prediction - Contract-Composable Analytics Services
 ========================================================================
 Competition: https://www.kaggle.com/competitions/playground-series-s4e12
 Problem Type: Regression (RMSLE metric)
@@ -27,7 +27,7 @@ import pandas as pd
 import numpy as np
 from typing import Dict, List, Optional, Any
 
-from slego_contract import contract
+from contract import contract
 
 
 # ============================================================================

@@ -1,5 +1,5 @@
 """
-Stanford COVID Vaccine (OpenVaccine) - SLEGO Services
+Stanford COVID Vaccine (OpenVaccine) - Contract-Composable Analytics Services
 ======================================================
 
 Competition: https://www.kaggle.com/competitions/stanford-covid-vaccine
@@ -24,7 +24,7 @@ import pandas as pd
 from typing import Dict, List, Any, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # Lazy torch imports
 _torch = None
@@ -1643,7 +1643,7 @@ def run_pipeline(base_path: str, verbose: bool = True) -> Dict[str, Any]:
     from pipeline_runner import PipelineRunner
 
     db_path = os.path.join(
-        os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "slego_kb.sqlite"
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "kb.sqlite"
     )
     runner = PipelineRunner(
         db_path=db_path,

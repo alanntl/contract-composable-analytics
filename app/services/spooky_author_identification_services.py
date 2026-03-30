@@ -1,5 +1,5 @@
 """
-Spooky Author Identification - SLEGO Services
+Spooky Author Identification - Contract-Composable Analytics Services
 ==============================================
 Competition: https://www.kaggle.com/competitions/spooky-author-identification
 Problem Type: Multiclass Classification (3 classes: EAP, HPL, MWS)
@@ -26,7 +26,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # HELPERS

@@ -1,5 +1,5 @@
 """
-Poker Rule Induction - SLEGO Services
+Poker Rule Induction - Contract-Composable Analytics Services
 =======================================
 Competition: https://www.kaggle.com/competitions/poker-rule-induction
 Problem Type: Multiclass Classification (10 classes: 0-9)
@@ -29,7 +29,7 @@ import pandas as pd
 from typing import Dict, Optional, List
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 from services.io_utils import load_data as _load_data, save_data as _save_data
 
 

@@ -1,5 +1,5 @@
 """
-Playground Series S4E1 - Bank Churn Prediction - SLEGO Services
+Playground Series S4E1 - Bank Churn Prediction - Contract-Composable Analytics Services
 ===============================================================
 Competition: https://www.kaggle.com/competitions/playground-series-s4e1
 Problem Type: Binary Classification
@@ -19,7 +19,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 try:
     from services.classification_services import train_lightgbm_classifier, predict_classifier

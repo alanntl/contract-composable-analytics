@@ -1,5 +1,5 @@
 """
-Rossmann Store Sales - SLEGO Services
+Rossmann Store Sales - Contract-Composable Analytics Services
 ======================================
 Competition: https://www.kaggle.com/competitions/rossmann-store-sales
 Problem Type: Regression (RMSPE metric)
@@ -29,7 +29,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 from services.io_utils import load_data as _load_data, save_data as _save_data
 
 # Import reusable services

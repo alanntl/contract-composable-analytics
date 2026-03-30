@@ -1,5 +1,5 @@
 """
-March Machine Learning Mania 2017 - SLEGO Services
+March Machine Learning Mania 2017 - Contract-Composable Analytics Services
 ===================================================
 Competition: https://www.kaggle.com/competitions/march-machine-learning-mania-2017
 Problem Type: Binary Classification (probability)
@@ -33,7 +33,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 try:
     from services.io_utils import load_data as _load_data, save_data as _save_data

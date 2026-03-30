@@ -1,5 +1,5 @@
 """
-M5 Forecasting Accuracy - SLEGO Services
+M5 Forecasting Accuracy - Contract-Composable Analytics Services
 ==========================================
 
 Competition: https://www.kaggle.com/competitions/m5-forecasting-accuracy
@@ -7,7 +7,7 @@ Problem Type: Time Series Forecasting
 Target: 28-day ahead sales forecast
 
 This file contains services for the M5 forecasting pipeline.
-Services are designed for review, testing, and conversion to SLEGO format.
+Services are designed for review, testing, and conversion to Contract-Composable Analytics format.
 
 Dataset Structure:
 - calendar.csv: Date features, events, SNAP info
@@ -58,7 +58,7 @@ from sklearn.model_selection import train_test_split
 # Add parent directory for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from slego_contract import contract
+from contract import contract
 
 
 # =============================================================================
@@ -1374,7 +1374,7 @@ def run_pipeline(base_path: str, verbose: bool = True) -> Dict[str, Any]:
 
 
 # =============================================================================
-# REUSABLE SERVICES (Can be registered in SLEGO KB)
+# REUSABLE SERVICES (Can be registered in Contract-Composable Analytics KB)
 # =============================================================================
 
 """

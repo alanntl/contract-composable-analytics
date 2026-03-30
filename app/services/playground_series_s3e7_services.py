@@ -1,5 +1,5 @@
 """
-Playground Series S3E7 - SLEGO Services
+Playground Series S3E7 - Contract-Composable Analytics Services
 ========================================
 Competition: https://www.kaggle.com/competitions/playground-series-s3e7
 Problem Type: Binary Classification (booking_status: 0=Not Canceled, 1=Canceled)

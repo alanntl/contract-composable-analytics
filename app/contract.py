@@ -1,10 +1,10 @@
 """
-SLEGO Data Contract System
+Data Contract System
 ==========================
 
-A unified, machine-checkable schema system for SLEGO microservices.
+A unified, machine-checkable schema system for Contract-Composable Analytics microservices.
 
-SLEGO GUIDELINES IMPLEMENTED:
+Contract-Composable Analytics GUIDELINES IMPLEMENTED:
 - G2: Explicit Data Interface - All I/O declared with format contracts
 - G6: Semantic Metadata - Services self-register for AI discovery
 
@@ -15,7 +15,7 @@ FEATURES:
 - validate_pipeline(): Machine-check pipeline connections before execution
 
 USAGE:
-    from slego_contract import contract, IOManager, ServiceRegistry, validate_pipeline
+    from contract import contract, IOManager, ServiceRegistry, validate_pipeline
 
     @contract(
         inputs={"data": {"format": "csv", "schema": {"type": "tabular"}}},
@@ -26,7 +26,7 @@ USAGE:
         ...
         IOManager.save(model, outputs["model"], "pickle")
 
-Author: SLEGO Framework
+Author: Framework
 Version: 1.0.0
 """
 
@@ -618,7 +618,7 @@ def check_schema_compatibility(
 
 class IOManager:
     """
-    Central handler for all SLEGO Input/Output operations.
+    Central handler for all Contract-Composable Analytics Input/Output operations.
 
     Decouples service logic (G1) from storage formats.
     Each format defines: read, write, mime type, description, and output type.

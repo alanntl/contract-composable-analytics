@@ -1,5 +1,5 @@
 """
-SLEGO Feature Engineering Services - Generic Feature Creation
+Contract-Composable Analytics Feature Engineering Services - Generic Feature Creation
 ==============================================================
 This module provides reusable feature engineering services.
 Use these for any competition requiring feature transformation.
@@ -15,7 +15,7 @@ from functools import wraps
 
 
 def contract(inputs=None, outputs=None, params=None, description=None, tags=None, version="1.0.0"):
-    """Service contract decorator for SLEGO services."""
+    """Service contract decorator for Contract-Composable Analytics services."""
     def decorator(func):
         func._contract = {
             'inputs': inputs or {},

@@ -1,5 +1,5 @@
 """
-SLEGO Pipeline Runner
+Pipeline Runner
 =====================
 
 Executes pipelines from JSON specifications using services stored in the Knowledge Base.
@@ -19,12 +19,12 @@ Based on the paper's design:
 Usage:
     from pipeline_runner import PipelineRunner
 
-    runner = PipelineRunner("slego_kb.sqlite")
+    runner = PipelineRunner("kb.sqlite")
     runner.run_pipeline("house_price_training")
     # OR
     runner.run_from_json("pipeline.json")
 
-Author: SLEGO Framework
+Author: Framework
 Version: 1.0.0
 """
 
@@ -45,15 +45,15 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 try:
     # When imported as a package (e.g., from app.pipeline_runner)
-    from .slego_kb import SlegoKnowledgeBase  # type: ignore
+    from .kb import KnowledgeBase  # type: ignore
 except Exception:
     # When executed directly as a script
-    from slego_kb import SlegoKnowledgeBase
+    from kb import KnowledgeBase
 
 
 class PipelineRunner:
     """
-    Executes SLEGO pipelines from JSON specifications.
+    Executes Contract-Composable Analytics pipelines from JSON specifications.
 
     The runner:
     1. Validates pipeline contracts before execution (G2, G5)
@@ -62,7 +62,7 @@ class PipelineRunner:
     4. Tracks execution metrics
 
     Example:
-        runner = PipelineRunner("slego_kb.sqlite")
+        runner = PipelineRunner("kb.sqlite")
 
         # Run by pipeline name (from KB)
         result = runner.run_pipeline("house_price_training")
@@ -77,7 +77,7 @@ class PipelineRunner:
     # Default storage folder for all data and artifacts
     DEFAULT_STORAGE = "storage"
 
-    def __init__(self, db_path: Optional[str] = "slego_kb.sqlite", verbose: bool = True, storage: str = None, modules: List[str] = None):
+    def __init__(self, db_path: Optional[str] = "kb.sqlite", verbose: bool = True, storage: str = None, modules: List[str] = None):
         """
         Initialize the Pipeline Runner.
 
@@ -95,7 +95,7 @@ class PipelineRunner:
         """
         self.db_path = db_path
         self.verbose = verbose
-        self.kb = SlegoKnowledgeBase(db_path) if db_path else None
+        self.kb = KnowledgeBase(db_path) if db_path else None
 
         # Modules to load services from
         self.modules = modules or []
@@ -239,7 +239,7 @@ class PipelineRunner:
             - error: str (if failed)
         """
         self.log(f"\n{'='*70}")
-        self.log(f"SLEGO Pipeline Runner - {pipeline_name}")
+        self.log(f"Pipeline Runner - {pipeline_name}")
         self.log(f"{'='*70}")
 
         start_time = time.time()
@@ -683,9 +683,9 @@ class PipelineRunner:
         from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
         from sklearn.model_selection import train_test_split
 
-        # Import SLEGO contract system
+        # Import Contract-Composable Analytics contract system
         sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-        from slego_contract import (
+        from contract import (
             contract, IOManager, ServiceRegistry,
             TabularSchema, JSONSchema, ArtifactSchema
         )
@@ -719,7 +719,7 @@ class PipelineRunner:
             "r2_score": r2_score,
             "train_test_split": train_test_split,
 
-            # SLEGO
+            # Contract-Composable Analytics
             "contract": contract,
             "IOManager": IOManager,
             "ServiceRegistry": ServiceRegistry,
@@ -1014,7 +1014,7 @@ class PipelineRunner:
             contract = None
             if service_exists:
                 # Service found in loaded modules - try to get contract
-                from slego_contract import ServiceRegistry
+                from contract import ServiceRegistry
                 contract = ServiceRegistry.get(service_name)
                 # If not in ServiceRegistry, try KB
                 if not contract and self.kb:
@@ -1025,7 +1025,7 @@ class PipelineRunner:
             elif self.kb:
                 contract = self.kb.get_service_contract(service_name)
             else:
-                from slego_contract import ServiceRegistry
+                from contract import ServiceRegistry
                 contract = ServiceRegistry.get(service_name)
 
             if not contract and not service_exists:
@@ -1073,7 +1073,7 @@ class PipelineRunner:
         if self.kb:
             return self.kb.check_format_compatibility(output_fmt, input_fmt)
 
-        from slego_contract import IOManager
+        from contract import IOManager
 
         if output_fmt == input_fmt:
             return True
@@ -1151,11 +1151,11 @@ def main():
     """CLI interface for running pipelines."""
     import argparse
 
-    parser = argparse.ArgumentParser(description="SLEGO Pipeline Runner")
+    parser = argparse.ArgumentParser(description="Pipeline Runner")
     parser.add_argument("action", choices=["run", "list", "describe"],
                        help="Action to perform")
     parser.add_argument("--pipeline", "-p", help="Pipeline name or JSON file")
-    parser.add_argument("--db", default="slego_kb.sqlite", help="Knowledge Base database path")
+    parser.add_argument("--db", default="kb.sqlite", help="Knowledge Base database path")
     parser.add_argument("--base-path", "-b", help="Base path for data artifacts")
     parser.add_argument("--modules", "-m", nargs="*", help="Modules to load (e.g., house_prices_services)")
     parser.add_argument("--quiet", "-q", action="store_true", help="Quiet mode")

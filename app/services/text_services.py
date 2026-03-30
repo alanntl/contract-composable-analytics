@@ -1,5 +1,5 @@
 """
-Text/NLP Services - SLEGO Common Module
+Text/NLP Services - Common Module
 ========================================
 
 Generic text processing and NLP services reusable across any text-based competition.
@@ -33,7 +33,7 @@ import pandas as pd
 from typing import Dict, List, Any, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # HELPERS: Import from shared io_utils

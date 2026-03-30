@@ -1,5 +1,5 @@
 """
-Costa Rican Household Poverty Prediction - SLEGO Services
+Costa Rican Household Poverty Prediction - Contract-Composable Analytics Services
 ==========================================================
 Competition: https://www.kaggle.com/competitions/costa-rican-household-poverty-prediction
 Problem Type: Multiclass Classification (4 poverty levels: 1=extreme, 2=moderate, 3=vulnerable, 4=non-vulnerable)
@@ -34,7 +34,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # IMPORTS FROM COMMON MODULES (G1: Reuse existing services)

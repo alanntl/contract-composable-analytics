@@ -1,10 +1,10 @@
 # Contract-Composable Analytics
 
-A contract-driven framework for composable analytics pipelines, built on the SLEGO (Service LEGo Orchestration) system. This repository accompanies the conference paper submission.
+A contract-driven framework for composable analytics pipelines, built on the Contract-Composable Analytics (Service LEGo Orchestration) system. This repository accompanies the conference paper submission.
 
 ## Overview
 
-SLEGO enables non-expert users to assemble analytics pipelines from reusable, contract-verified microservices. The system features:
+Contract-Composable Analytics enables non-expert users to assemble analytics pipelines from reusable, contract-verified microservices. The system features:
 
 - **Contract System (G2, G6):** Machine-checkable data interface contracts via Python decorators, ensuring type-safe service composition
 - **Knowledge Base:** SQLite-backed service/pipeline registry with FAISS vector embeddings for semantic search
@@ -24,18 +24,18 @@ contract-composible-analytics/
 ├── paper/                       # Conference paper source
 │   ├── main.tex                 # LaTeX source (IEEE format)
 │   ├── main.pdf                 # Compiled paper
-│   ├── SLEGOContracts.dfy       # Dafny formal verification
+│   ├── Contract-Composable AnalyticsContracts.dfy       # Dafny formal verification
 │   ├── IEEEtran.cls             # IEEE template
 │   ├── algorithm.sty / algorithmicx.sty / algpseudocode.sty
 │   └── figure/                  # Paper figures
 │
 ├── app/                         # Runnable Streamlit application
-│   ├── slego_app_streamlit.py   # Main UI
-│   ├── slego_contract.py        # Contract decorator system
+│   ├── contract_app_streamlit.py   # Main UI
+│   ├── contract_contract.py        # Contract decorator system
 │   ├── pipeline_runner.py       # DAG execution engine
-│   ├── slego_kb.py              # Knowledge base ORM
+│   ├── contract_kb.py              # Knowledge base ORM
 │   ├── recommender.py           # FAISS + LLM pipeline composer
-│   ├── slego_kb.sqlite          # Pre-built knowledge base
+│   ├── kb.sqlite          # Pre-built knowledge base
 │   ├── .env.example             # API key template
 │   ├── style.css
 │   ├── services/                # 100 composable microservices
@@ -79,7 +79,7 @@ cp .env.example .env
 
 ```bash
 cd app
-streamlit run slego_app_streamlit.py
+streamlit run contract_app_streamlit.py
 ```
 
 The app will open at `http://localhost:8501`.
@@ -97,11 +97,11 @@ kaggle competitions download -c <competition-slug>
 
 | File | Description |
 |------|-------------|
-| `slego_contract.py` | `@contract` decorator, `IOManager`, `ServiceRegistry` — implements Guidelines G2 and G6 |
+| `contract_contract.py` | `@contract` decorator, `IOManager`, `ServiceRegistry` — implements Guidelines G2 and G6 |
 | `pipeline_runner.py` | DAG-based pipeline execution with topological ordering and contract validation |
 | `recommender.py` | FAISS retrieval + LangGraph + LLM composition for pipeline recommendation |
-| `slego_kb.py` | Knowledge base storing services, pipelines, embeddings, and execution history |
-| `SLEGOContracts.dfy` | Dafny formal verification of contract properties |
+| `contract_kb.py` | Knowledge base storing services, pipelines, embeddings, and execution history |
+| `Contract-Composable AnalyticsContracts.dfy` | Dafny formal verification of contract properties |
 
 ## Evaluation
 

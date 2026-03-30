@@ -1,5 +1,5 @@
 """
-Google QUEST Q&A Labeling - SLEGO Services
+Google QUEST Q&A Labeling - Contract-Composable Analytics Services
 ============================================
 Competition: https://www.kaggle.com/competitions/google-quest-challenge
 Problem Type: Multi-label Regression (30 continuous targets, 0-1 range)
@@ -13,7 +13,7 @@ Top solution insights (ALBERT/BERT transformer models):
 - K-fold cross-validation with GroupKFold on question_body
 - Spearman correlation as evaluation metric
 
-SLEGO approach: TF-IDF vectorization + Multi-output regression (RandomForest)
+Contract-Composable Analytics approach: TF-IDF vectorization + Multi-output regression (RandomForest)
 """
 
 import os

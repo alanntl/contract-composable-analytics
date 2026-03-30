@@ -1,5 +1,5 @@
 """
-Digit Recognizer (MNIST) - SLEGO Services
+Digit Recognizer (MNIST) - Contract-Composable Analytics Services
 ==========================================
 Competition: https://www.kaggle.com/competitions/digit-recognizer
 Problem Type: Multiclass Classification (10 classes: 0-9)
@@ -24,7 +24,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 try:
     from services.classification_services import train_lightgbm_classifier, predict_classifier

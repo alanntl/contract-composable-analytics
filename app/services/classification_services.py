@@ -1,5 +1,5 @@
 """
-Classification Services - SLEGO Common Module
+Classification Services - Common Module
 ===============================================
 
 Generic classification model services for binary and multiclass problems.
@@ -19,7 +19,7 @@ import pandas as pd
 from typing import Dict, List, Any, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # =============================================================================
 # HELPERS: Import from shared io_utils

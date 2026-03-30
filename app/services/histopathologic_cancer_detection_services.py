@@ -1,5 +1,5 @@
 """
-Histopathologic Cancer Detection - SLEGO Competition Module
+Histopathologic Cancer Detection - Contract-Composable Analytics Competition Module
 ============================================================
 Competition: https://www.kaggle.com/competitions/histopathologic-cancer-detection
 Problem Type: Binary Classification (image-based)
@@ -148,7 +148,7 @@ def run_pipeline():
     from pipeline_runner import PipelineRunner
 
     runner = PipelineRunner(
-        "slego_kb.sqlite",
+        "kb.sqlite",
         modules=["image_services"],
     )
     result = runner.run(

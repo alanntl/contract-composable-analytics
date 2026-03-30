@@ -1,5 +1,5 @@
 """
-SLEGO Services for kobe-bryant-shot-selection competition
+Contract-Composable Analytics Services for kobe-bryant-shot-selection competition
 =========================================================
 Competition: https://www.kaggle.com/competitions/kobe-bryant-shot-selection
 Problem Type: Binary Classification
@@ -18,7 +18,7 @@ import numpy as np
 from typing import Dict, List, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 # Import reusable services from common modules
 from services.preprocessing_services import (

@@ -1,5 +1,5 @@
 """
-SLEGO Services for tabular-playground-series-jun-2021
+Contract-Composable Analytics Services for tabular-playground-series-jun-2021
 Multiclass Classification - Target: target (Class_1 to Class_9)
 75 anonymous count-like features (feature_0 to feature_74)
 
@@ -19,7 +19,7 @@ import pandas as pd
 import numpy as np
 from typing import Dict, List, Optional
 
-from slego_contract import contract
+from contract import contract
 
 
 def _load_data(path: str) -> pd.DataFrame:

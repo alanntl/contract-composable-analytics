@@ -1,5 +1,5 @@
 """
-SLEGO Knowledge Base v2 - Optimized for LLM RAG
+Knowledge Base v2 - Optimized for LLM RAG
 ================================================
 
 Designed for Multi-Agent RAG pipeline recommendation system.
@@ -33,7 +33,7 @@ Schema Overview:
 │     - artifacts (produced files with lineage)               │
 └─────────────────────────────────────────────────────────────┘
 
-Author: SLEGO Framework
+Author: Framework
 Version: 2.0.0
 """
 
@@ -441,9 +441,9 @@ LIMIT 100;
 # KNOWLEDGE BASE CLASS v2
 # =============================================================================
 
-class SlegoKnowledgeBase:
+class KnowledgeBase:
     """
-    SLEGO Knowledge Base v2 - Optimized for LLM RAG.
+    Knowledge Base v2 - Optimized for LLM RAG.
 
     Key Features:
     - Full source code storage for LLM understanding
@@ -452,7 +452,7 @@ class SlegoKnowledgeBase:
     - Pre-computed RAG context caching
 
     Usage:
-        kb = SlegoKnowledgeBase("slego_kb.sqlite")
+        kb = KnowledgeBase("kb.sqlite")
 
         # Register service with full source
         kb.register_service(
@@ -469,7 +469,7 @@ class SlegoKnowledgeBase:
         )
     """
 
-    def __init__(self, db_path: str = "slego_kb.sqlite"):
+    def __init__(self, db_path: str = "kb.sqlite"):
         self.db_path = db_path
         self.conn = None
         self._connect()
@@ -1471,7 +1471,7 @@ Rules:
         """Print KB overview."""
         stats = self.get_stats()
         print("\n" + "=" * 60)
-        print("SLEGO KNOWLEDGE BASE v2")
+        print("KNOWLEDGE BASE v2")
         print("=" * 60)
         print(f"Database: {self.db_path}")
         print(f"\nServices (M):    {stats['services']}")
@@ -1487,7 +1487,7 @@ Rules:
 # =============================================================================
 
 if __name__ == "__main__":
-    kb = SlegoKnowledgeBase("test_kb_v2.sqlite")
+    kb = KnowledgeBase("test_kb_v2.sqlite")
 
     # Register a sample service with full source
     sample_source = '''

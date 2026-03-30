@@ -1,5 +1,5 @@
 """
-Walmart Recruiting Store Sales Forecasting - SLEGO Services v4
+Walmart Recruiting Store Sales Forecasting - Contract-Composable Analytics Services v4
 ================================================================
 Competition: https://www.kaggle.com/competitions/walmart-recruiting-store-sales-forecasting
 Problem Type: Regression (WMAE metric - Weighted Mean Absolute Error)
@@ -32,7 +32,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 from services.io_utils import load_data as _load_data, save_data as _save_data
 
 

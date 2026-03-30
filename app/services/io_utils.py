@@ -1,5 +1,5 @@
 """
-I/O Utilities - Shared helper functions for SLEGO services
+I/O Utilities - Shared helper functions for Contract-Composable Analytics services
 ===========================================================
 
 This module provides common file I/O functions used across all service modules.

@@ -1,5 +1,5 @@
 """
-Web Traffic Time Series Forecasting - SLEGO Services
+Web Traffic Time Series Forecasting - Contract-Composable Analytics Services
 =====================================================
 Competition: https://www.kaggle.com/competitions/web-traffic-time-series-forecasting
 Problem Type: Time Series Forecasting (Regression)
@@ -27,7 +27,7 @@ from typing import Dict, List, Optional, Any
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 try:
-    from slego_contract import contract
+    from contract import contract
 except ImportError:
     def contract(**kwargs):
         def decorator(func):

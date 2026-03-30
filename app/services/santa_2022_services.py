@@ -1,5 +1,5 @@
 """
-Santa 2022 - The Christmas Card Conundrum - SLEGO Services
+Santa 2022 - The Christmas Card Conundrum - Contract-Composable Analytics Services
 ============================================================
 Competition: https://www.kaggle.com/competitions/santa-2022
 Problem Type: Optimization (TSP-variant / Robotic Arm Path Planning)
@@ -27,7 +27,7 @@ import sys
 # Add parent directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from slego_contract import contract
+from contract import contract
 
 try:
     from services.io_services import load_data, save_data
@@ -215,7 +215,7 @@ def _get_path_to_point_compressed(config: List[Tuple[int, int]], point: Tuple[in
 
 
 # =============================================================================
-# SLEGO SERVICES
+# Contract-Composable Analytics SERVICES
 # =============================================================================
 
 @contract(

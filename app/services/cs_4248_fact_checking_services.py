@@ -1,5 +1,5 @@
 """
-CS-4248 Fact Checking - SLEGO Services
+CS-4248 Fact Checking - Contract-Composable Analytics Services
 =======================================
 Competition: https://www.kaggle.com/competitions/cs-4248-fact-checking-2420
 Problem Type: Multiclass Classification (Verdict: -1, 0, 1)

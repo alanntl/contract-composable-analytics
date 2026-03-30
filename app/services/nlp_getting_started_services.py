@@ -1,5 +1,5 @@
 """
-NLP Getting Started (Real or Not? Disaster Tweets) - SLEGO Services
+NLP Getting Started (Real or Not? Disaster Tweets) - Contract-Composable Analytics Services
 ====================================================================
 Competition: https://www.kaggle.com/competitions/nlp-getting-started
 Problem Type: Binary Classification
@@ -19,7 +19,7 @@ import pandas as pd
 from typing import Dict, List, Optional, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from slego_contract import contract
+from contract import contract
 
 try:
     from services.classification_services import train_lightgbm_classifier, predict_classifier
