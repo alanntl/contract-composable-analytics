@@ -1,0 +1,100 @@
+# =====================
+# Secrets & credentials
+# =====================
+.env
+*.key
+*.pem
+
+# =====================
+# Python
+# =====================
+__pycache__/
+*.py[cod]
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+
+# =====================
+# Data & models
+# =====================
+app/storage/*/
+!app/storage/.gitkeep
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+
+# =====================
+# Database
+# =====================
+*.sqlite-journal
+*.sqlite.bak
+*.sqlite-wal
+*.sqlite-shm
+
+# =====================
+# IDE & OS
+# =====================
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# =====================
+# Jupyter
+# =====================
+.ipynb_checkpoints/
+
+# =====================
+# LaTeX build artifacts
+# =====================
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+
+# =====================
+# Backups & temp files
+# =====================
+*.bak
+*.bak2
+*.tmp
+*~
+
+# =====================
+# Large experiment outputs
+# =====================
+evaluation/experiments/llm_compose/viz_verification/
+evaluation/experiments/llm_compose/composed_pipelines/
+evaluation/experiments/llm_compose/visualizations/
+evaluation/experiments/leaderboards/
+
+# =====================
+# Project-specific excludes
+# =====================
+.claude/
+.benchmarks/
+.pytest_cache/
+evaluation_log.txt
+
+# =====================
+# Excluded directories
+# =====================
+paper/
+webapp/

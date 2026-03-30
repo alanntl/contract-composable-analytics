@@ -1,0 +1,30 @@
+================================================================================
+BM25 (OKAPI) BASELINE EVALUATION REPORT
+================================================================================
+Generated: 2026-02-07 00:43:10
+Total competitions evaluated: 107
+Algorithm: BM25Okapi (rank_bm25 library, default k1=1.5, b=0.75)
+Tokenizer: Lowercase, punctuation removal, min length 2
+
+--------------------------------------------------------------------------------
+RETRIEVAL PERFORMANCE
+--------------------------------------------------------------------------------
+
+Metric       | Hits            | Rate      
+---------------------------------------------
+Hit@1       | 71/107        | 66.4%
+Hit@3       | 84/107        | 78.5%
+Hit@5       | 88/107        | 82.2%
+Hit@10      | 94/107        | 87.9%
+Hit@15      | 97/107        | 90.7%
+
+--------------------------------------------------------------------------------
+NOTES
+--------------------------------------------------------------------------------
+- Query text: task_goal + data_context + problem_type + domain_keywords from guided_query.
+- Corpus text: task_goal + description + problem_type + domain from pipelines table.
+- BM25 is a probabilistic bag-of-words retrieval model (no semantic understanding).
+
+================================================================================
+END OF REPORT
+================================================================================

@@ -1,0 +1,31 @@
+================================================================================
+RANDOM BASELINE EVALUATION STATISTICS REPORT
+================================================================================
+Generated: 2026-02-07 00:42:50
+Total competitions evaluated: 107
+Monte Carlo trials: 1000
+Random seed: 42
+
+--------------------------------------------------------------------------------
+COMPARISON: Uniform Random vs Problem-type Random
+--------------------------------------------------------------------------------
+
+Metric       | Uniform Random            | Problem-type Random      
+----------------------------------------------------------------------
+Hit@1       | 1.0/107 (1.0%)      | 6.0/107 (5.6%)
+Hit@3       | 3.0/107 (2.8%)      | 16.1/107 (15.0%)
+Hit@5       | 5.0/107 (4.7%)      | 26.0/107 (24.3%)
+Hit@10      | 10.0/107 (9.3%)      | 50.8/107 (47.5%)
+Hit@15      | 15.0/107 (14.0%)      | 71.3/107 (66.7%)
+
+--------------------------------------------------------------------------------
+NOTES
+--------------------------------------------------------------------------------
+- Uniform Random: samples k pipelines uniformly from all 107 pipelines.
+- Problem-type Random: samples k pipelines from the same problem type.
+- Results averaged over 1000 Monte Carlo trials for stability.
+- These baselines establish the lower bound for retrieval performance.
+
+================================================================================
+END OF REPORT
+================================================================================
